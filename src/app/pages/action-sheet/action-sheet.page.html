@@ -1,0 +1,13 @@
+<app-header titulo="action sheet">
+</app-header>
+
+<ion-content class="ion-padding">
+    <ion-button id="open-action-sheet">Mostrar action-sheet</ion-button>
+    <ion-action-sheet
+    trigger="open-action-sheet"
+    header="Example header"
+    subHeader="Example subheader"
+    [buttons]="actionSheetButtons"
+    (didDismiss)="onClick($event)"
+  ></ion-action-sheet>
+</ion-content>

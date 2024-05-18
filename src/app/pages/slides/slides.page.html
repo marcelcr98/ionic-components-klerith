@@ -1,0 +1,21 @@
+<ion-content>
+  <ion-item-sliding pager="ios" class="slide-full">
+    <ion-item-options *ngFor="let slide of slides">
+      <ion-card mode="ios">
+        <img [src]="slide.img" class="slide-image" />
+
+        <ion-card-header>
+          <ion-card-subtitle>{{ slide.titulo }}</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content> {{ slide.desc }} </ion-card-content>
+      </ion-card>
+    </ion-item-options>
+
+    <ion-item-options>
+      <ion-button (click)="onClick()" expand="block" fill="clear">
+        Comenzar
+      </ion-button>
+    </ion-item-options>
+  </ion-item-sliding>
+</ion-content>
